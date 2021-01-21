@@ -121,3 +121,4 @@ C:\Users\Gaurav Agrawal\source\repos\GigHub\GigHub\bin\System.Net.Http.Formattin
 C:\Users\Gaurav Agrawal\source\repos\GigHub\GigHub\bin\System.Web.Http.xml
 C:\Users\Gaurav Agrawal\source\repos\GigHub\GigHub\bin\System.Web.Http.WebHost.xml
 C:\Users\Gaurav Agrawal\source\repos\GigHub\GigHub\obj\Debug\GigHub.Migrations.AddFollowing.resources
+C:\Users\Gaurav Agrawal\source\repos\GigHub\GigHub\obj\Debug\GigHub.Migrations.AddIsCanceledToGig.resources
