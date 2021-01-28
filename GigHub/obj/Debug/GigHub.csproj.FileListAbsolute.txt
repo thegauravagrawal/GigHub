@@ -122,3 +122,6 @@ C:\Users\Gaurav Agrawal\source\repos\GigHub\GigHub\bin\System.Web.Http.xml
 C:\Users\Gaurav Agrawal\source\repos\GigHub\GigHub\bin\System.Web.Http.WebHost.xml
 C:\Users\Gaurav Agrawal\source\repos\GigHub\GigHub\obj\Debug\GigHub.Migrations.AddFollowing.resources
 C:\Users\Gaurav Agrawal\source\repos\GigHub\GigHub\obj\Debug\GigHub.Migrations.AddIsCanceledToGig.resources
+C:\Users\Gaurav Agrawal\source\repos\GigHub\GigHub\obj\Debug\GigHub.Migrations.AddNotification.resources
+C:\Users\Gaurav Agrawal\source\repos\GigHub\GigHub\bin\AutoMapper.dll
+C:\Users\Gaurav Agrawal\source\repos\GigHub\GigHub\bin\AutoMapper.xml

@@ -36,6 +36,10 @@ span.field-validation-error {
 .voffset5{margin-top: 80px;}
 
 /* Bootstrap Overrides */
+.popover{
+    box-shadow: none;
+    -webkit-box-shadow:none;
+}
 .navbar-inverse {
     background-color: #ff4342;
     border-color: #ff4342;
@@ -47,6 +51,17 @@ span.field-validation-error {
 
 .navbar-inverse .navbar-brand {
     color: #fff;
+}
+
+.navbar-inverse .notifications{
+    position:relative;
+}
+
+.navbar-inverse .notifications .badge {
+    position: absolute;
+    top: 8px;
+    right: -1px;
+    background-color: #a80a0a;
 }
 
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
@@ -104,58 +119,84 @@ h6,
     border-radius: 9px;
 }
 
-/* Page-level Styles */
-.gigs{
+/* Page-level styles */
+.gigs {
     list-style: none;
 }
 
-.gigs > li{
-    position: relative;
-    margin-bottom: 30px;
+    .gigs > li {
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+        .gigs > li .date {
+            background: red;
+            color: white;
+            text-align: center;
+            width: 60px;
+            border-radius: 8px;
+        }
+
+            .gigs > li .date .month {
+                text-transform: uppercase;
+                font-size: 14px;
+                font-weight: bold;
+                padding: 2px 6px;
+            }
+
+            .gigs > li .date .day {
+                background: #f7f7f7;
+                color: #333;
+                font-size: 20px;
+                padding: 6px 12px;
+            }
+
+        .gigs > li .details {
+            position: absolute;
+            top: 0;
+            left: 70px;
+        }
+
+            .gigs > li .details .artist {
+                font-weight: bold;
+                display: block;
+            }
+
+            .gigs > li .details .genre {
+                font-size: 15px;
+            }
+
+        .gigs > li .actions {
+            font-size: 15px;
+            display: none;
+        }
+
+        .gigs > li:hover .actions {
+            display: block;
+        }
+
+.popover-notifications .popover-content {
+    padding: 0;
 }
 
-.gigs > li .date{
-    background: red;
-    color: white;
-    text-align:center;
-    width: 60px;
-    border-radius: 8px;
+.popover-notifications ul.notifications {
+    list-style: none;
+    padding-left: 0;
 }
 
-.gigs > li .date .month{
-    text-transform: uppercase;
-    font-size:14px;
-    font-weight: bold;
-    padding: 2px 6px;
-}
+    .popover-notifications ul.notifications > li {
+        border-bottom: 1px solid #ddd;
+        padding: 10px;
+    }
 
-.gigs > li .date .day {
-    background: #f7f7f7;
-    color: #333;
-    font-size: 20px;
-    padding: 6px 12px;
-}
+        .popover-notifications ul.notifications > li:last-child {
+            border-bottom: none;
+        }
 
-.gigs > li .details{
-    position: absolute;
-    top: 0;
-    left: 70px;
-}
+    .popover-notifications ul.notifications .highlight {
+        font-weight: bold;
+    }
 
-.gigs > li .details .artist{
-    font-weight: bold;
-    display: block;
-}
-
-.gigs > li .details .genre{
-    font-size: 15px;
-}
-
-.gigs > li .actions{
-    font-size: 15px;
-    display:none;
-}
-
-.gigs > li:hover .actions{
-    display: list-item;
+#searchGigs{
+    width:300px;
 }
