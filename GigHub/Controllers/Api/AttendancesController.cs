@@ -1,5 +1,7 @@
-﻿using GigHub.DTOs;
-using GigHub.Models;
+﻿using GigHub.Core;
+using GigHub.Core.DTOs;
+using GigHub.Core.Models;
+using GigHub.Persistence;
 using Microsoft.AspNet.Identity;
 using System.Linq;
 using System.Web.Http;
@@ -9,9 +11,11 @@ namespace GigHub.Controllers.Api
     [Authorize]
     public class AttendancesController : ApiController
     {
+        private readonly IUnitOfWork _unitOfWork;
         private ApplicationDbContext _context;
-        public AttendancesController()
+        public AttendancesController(IUnitOfWork unitOfWork)
         {
+            _unitOfWork = unitOfWork;
             _context = new ApplicationDbContext();
         }
 
@@ -29,8 +33,7 @@ namespace GigHub.Controllers.Api
                 AttendeeId = userId
             };
             _context.Attendances.Add(attendance);
-            _context.SaveChanges();
-
+            _unitOfWork.Complete();
             return Ok();
         }
 
@@ -46,8 +49,7 @@ namespace GigHub.Controllers.Api
                 return NotFound();
 
             _context.Attendances.Remove(attendance);
-            _context.SaveChanges();
-
+            _unitOfWork.Complete();
             return Ok(id);
         }
     }
