@@ -81,3 +81,5 @@ C:\Users\Gaurav Agrawal\source\repos\GigHub\GigHub.Tests\obj\Debug\GigHub.Tests.
 C:\Users\Gaurav Agrawal\source\repos\GigHub\GigHub.Tests\obj\Debug\GigHub.Tests.csproj.CopyComplete
 C:\Users\Gaurav Agrawal\source\repos\GigHub\GigHub.Tests\obj\Debug\GigHub.Tests.dll
 C:\Users\Gaurav Agrawal\source\repos\GigHub\GigHub.Tests\obj\Debug\GigHub.Tests.pdb
+C:\Users\Gaurav Agrawal\source\repos\GigHub\GigHub.Tests\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Gaurav Agrawal\source\repos\GigHub\GigHub.Tests\bin\Debug\EntityFramework.SqlServer.xml

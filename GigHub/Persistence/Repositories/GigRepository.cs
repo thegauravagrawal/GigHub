@@ -9,9 +9,9 @@ namespace GigHub.Persistence.Repositories
 {
     public class GigRepository : IGigRepository
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IApplicationDbContext _context;
 
-        public GigRepository(ApplicationDbContext context)              //constructor
+        public GigRepository(IApplicationDbContext context)              //constructor
         {
             _context = context;
         }
@@ -27,7 +27,10 @@ namespace GigHub.Persistence.Repositories
         public IEnumerable<Gig> GetUpcomingGigsByArtist(string artistId)
         {
             return _context.Gigs
-               .Where(g => g.ArtistId == artistId && g.DateTime > DateTime.Now && !g.IsCanceled)
+               .Where(g =>
+                   g.ArtistId == artistId &&
+                   g.DateTime > DateTime.Now &&
+                   !g.IsCanceled)
                .Include(g => g.Genre)
                .ToList();
         }
@@ -42,7 +45,7 @@ namespace GigHub.Persistence.Repositories
         public IEnumerable<Gig> GetGigsUserAttending(string userId)
         {
             return _context.Attendances
-                .Where(a => a.AttendeeId == userId)
+                .Where(a => a.AttendeeId == userId && a.Gig.DateTime > DateTime.Now)
                 .Select(a => a.Gig)
                 .Include(g => g.Artist)
                 .Include(g => g.Genre)
